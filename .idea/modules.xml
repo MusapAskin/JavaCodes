@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Code.iml" filepath="$PROJECT_DIR$/Code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NesneTabanlıProgramlama/NesneTabanlıProgramlama.iml" filepath="$PROJECT_DIR$/NesneTabanlıProgramlama/NesneTabanlıProgramlama.iml" />
+    </modules>
+  </component>
+</project>
