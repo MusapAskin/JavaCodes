@@ -27,19 +27,19 @@ class Account{
         }
         else{
             accountAmount-=amount;
-            System.out.println(amount+" TL hesabınızdan çekildi."+"\nYeni Bakiye: "+accountAmount+" TL");
+            System.out.println(amount+" TL hesabınızdan çekildi."+"\nYeni Bakiye : "+accountAmount+" TL");
         }
     }
 
     void check(){
-        System.out.println("Güncel Bakiye"+accountAmount);
+        System.out.println("Güncel Bakiye : "+accountAmount);
     }
 
     void addMoney() {
         System.out.println("Yatırmak istediğiniz tutarını giriniz.");
         double amount= scanner.nextDouble();
         accountAmount+=amount;
-        System.out.println(amount+" TL hesabınıza yatırıldı."+"\nYeni Bakiye: "+accountAmount+" TL");
+        System.out.println(amount+" TL hesabınıza yatırıldı."+"\nYeni Bakiye : "+accountAmount+" TL");
     }
 }
 public class BankAccount {
@@ -53,25 +53,34 @@ public class BankAccount {
                 "\n1.işlem: Hesabı göster "+"           |"+
                 " \n2.İşlem: Para yatır."+"              |"+
                 "\n3.işlem: Para çek"+"                 |"+
-                "\n4.işlem: Hesap tutarını göster."+"   |"+
-                "\n***********************************"+
-                "\nLütfen yapmak istediğiniz işlemi seçiniz..." );
+                "\n4.işlem: Hesap tutarını göster."+"   |" +
+                "\n***********************************");
+        System.out.println("İşlemi seçiniz.");
+        System.out.println("***********************************");
+        System.out.println("(Çkış için -1'e basınız.)");
 
-        int operation=scanner.nextInt();
-        switch (operation){
-            case 1:
-                customer1.show();
-                 break;
-            case 2:
-                customer1.addMoney();
+        while(true) {
+            int operation = scanner.nextInt();
+            if (operation == -1){
+                System.out.println("Hesaptan çıkılıyor");
                 break;
-            case 3:
-                customer1.takeMoney();
-                break;
-            case 4:
-                customer1.check();
-                break;
-            default: break;
+            }
+            switch (operation) {
+                case 1:
+                    customer1.show();
+                    break;
+                case 2:
+                    customer1.addMoney();
+                    break;
+                case 3:
+                    customer1.takeMoney();
+                    break;
+                case 4:
+                    customer1.check();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
