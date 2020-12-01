@@ -43,7 +43,7 @@ public class LinkedList {
 class Main {
     public static void main(String[] args) {
         LinkedList linkedList = new LinkedList();
-        for (String s : Arrays.asList("Aşkın", "Musap", "Computer Science")) {
+        for (String s : Arrays.asList("Aşkın", "Musap", "Computer Scientist")) {
             linkedList.add(s);
         }
         linkedList.display();
