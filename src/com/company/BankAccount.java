@@ -4,38 +4,43 @@ package com.company;
 import java.util.Scanner;
 
 class Account{
+    //Field Properties - Alan Özellikleri(objeye ait)
     Scanner scanner = new Scanner(System.in);
-    int customerNo;
-    String customer;
-    double accountAmount;
+    private int customerNo;
+    private String customer;
+    private double accountAmount;
 
-    void addCustomer(int no,String cos,double aa){
+    //Constructor - Yapıcı Metod
+    public Account(int no,String cos,double aa){
         customerNo=no;
         customer=cos;
         accountAmount=aa;
     }
-
+    //Costumer İnformation - Müşteri bilgisi
     public void show(){
         System.out.println(customerNo+" "+customer+" "+accountAmount);
     }
-
-    void takeMoney(){
+    //Para Çekme
+    public void takeMoney(){
         System.out.println("Çekmek istediğiniz tutarı giriniz.");
         double amount=scanner.nextDouble();
         if (amount>accountAmount){
-            System.out.println("Yeterli Bakiye yok.");
+            System.out.println("Yeterli Bakiye yok. Bakiyeniz : "+accountAmount);
+        }
+        else if(amount>1500){
+            System.out.println("Bir günde 1500 tl'den fazla çekemezsiniz...");
         }
         else{
             accountAmount-=amount;
             System.out.println(amount+" TL hesabınızdan çekildi."+"\nYeni Bakiye : "+accountAmount+" TL");
         }
     }
-
-    void check(){
+    //Account Amount - Hesap bakiyesi sorgulama
+    public void check(){
         System.out.println("Güncel Bakiye : "+accountAmount);
     }
-
-    void addMoney() {
+    //Para Ekleme
+    public void addMoney() {
         System.out.println("Yatırmak istediğiniz tutarını giriniz.");
         double amount= scanner.nextDouble();
         accountAmount+=amount;
@@ -45,8 +50,7 @@ class Account{
 public class BankAccount {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        Account customer1=new Account();
-        customer1.addCustomer(1,"Musap Aşkın ",10000);
+        Account customer1=new Account(1,"Musap Aşkın ",10000);
 
         System.out.println(
                 "***********************************"+
