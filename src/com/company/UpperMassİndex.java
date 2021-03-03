@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class UpperMassİndex {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Lütfen Boyunuzu ve kilonuzu giriniz...");
-
+        System.out.print("Lütfen Boyunuzu giriniz... : ");
         double size = scanner.nextDouble();
+        System.out.print("Lütfen kilonuzu giriniz... : ");
         double weight = scanner.nextDouble();
 
 
-        double Body_mass_İndex = (weight/(size*size)) ;
+        double Body_mass_İndex =(double) (weight/(size*size)) ;
 
         if(Body_mass_İndex < 18.5){
             System.out.println("Zayıfsınız.");

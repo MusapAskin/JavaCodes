@@ -14,3 +14,12 @@ public class Faktöriyel {
         System.out.println(result);
     }
 }
+//Recursive(yinelemeli) yapı ile Stack(Yığın) bağlantılı faktöriyel
+
+/*public void factorial(int n){
+
+       if(n == 0)
+           return 1;
+
+        return n*factorial(n-1);
+ */
