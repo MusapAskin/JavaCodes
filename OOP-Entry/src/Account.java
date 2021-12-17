@@ -66,13 +66,8 @@ import java.util.Scanner;
          username = sc.nextLine();
          System.out.print("Parola : ");
          password = sc.nextLine();
-         
-         if(Account.getUserName().equals(username) && Account.getPassword().equals(password)){
-             return true;
-         }
-         else{
-             return false;
-         }
+
+        return Account.getUserName().equals(username) && Account.getPassword().equals(password);
      }
  }
 
@@ -102,40 +97,44 @@ import java.util.Scanner;
              }
          }
          System.out.println("***********************************");
-                         String options ="1.Hesabı göster"+
-                         "\n2.işlem: Para çekme "+
-                         " \n3.İşlem: Para yatıma."+
-                         "\n(Çkış için q'a basınız.)"+
-                         "\n***********************************";
+                         String options = """
+                                 1.Hesabı göster
+                                 2.işlem: Para çekme \s
+                                 3.İşlem: Para yatıma.
+                                 (Çkış için q'a basınız.)
+                                 ***********************************""";
          System.out.println(options);
          System.out.println("***********************************");
-         
+
+         label:
          while(true){
              System.out.println("İşlemi seçiniz.");
              String option = sc.nextLine();
-             if(option.equals("q")){
-                 break;
-             }
-             else if(option.equals("1")){
-                 System.out.println("Hesap bakiyesi : "+account.getAmount());
-             }
-             else if(option.equals("2")){
-                 System.out.println("Çekmek istediğiniz tutarı giriniz : ");
-                 int amount = sc.nextInt();
-                 sc.nextLine();
-                 account.takeMoney(amount);
-             }
-             else if(option.equals("3")){
-                 System.out.println("Yatırmak istediğiniz tutarı giriniz : ");
-                 int amount = sc.nextInt();
-                 sc.nextLine();
-                 account.addMoney(amount);
-             }
-             else{
-                 System.out.println("Geçersiz işlem...");
+             switch (option) {
+                 case "q":
+                     break label;
+                 case "1":
+                     System.out.println("Hesap bakiyesi : " + account.getAmount());
+                     break;
+                 case "2": {
+                     System.out.println("Çekmek istediğiniz tutarı giriniz : ");
+                     int amount = sc.nextInt();
+                     sc.nextLine();
+                     account.takeMoney(amount);
+                     break;
+                 }
+                 case "3": {
+                     System.out.println("Yatırmak istediğiniz tutarı giriniz : ");
+                     int amount = sc.nextInt();
+                     sc.nextLine();
+                     account.addMoney(amount);
+                     break;
+                 }
+                 default:
+                     System.out.println("Geçersiz işlem...");
+                     break;
              }
          }
-
 
 
      }

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DataStructures/DataStructures.iml" filepath="$PROJECT_DIR$/DataStructures/DataStructures.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BTK/BTK.iml" filepath="$PROJECT_DIR$/BTK/BTK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Computer Science-Algorithms-Theory-and-Machines/Computer Science-Algorithms-Theory-and-Machines.iml" filepath="$PROJECT_DIR$/Computer Science-Algorithms-Theory-and-Machines/Computer Science-Algorithms-Theory-and-Machines.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataStructuresAndAlgorithms/DataStructures.iml" filepath="$PROJECT_DIR$/DataStructuresAndAlgorithms/DataStructures.iml" />
       <module fileurl="file://$PROJECT_DIR$/Designe/Designe.iml" filepath="$PROJECT_DIR$/Designe/Designe.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaCodes.iml" filepath="$PROJECT_DIR$/JavaCodes.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOP-Entry/OOP-Entry.iml" filepath="$PROJECT_DIR$/OOP-Entry/OOP-Entry.iml" />
